@@ -13,6 +13,9 @@ $(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
 # Inherit from munch device
 $(call inherit-product, device/xiaomi/munch/device.mk)
+TARGET_BOOT_ANIMATION_RES := 1080
+
+TARGET_SUPPORTS_CALL_RECORDING := true
 
 PRODUCT_NAME := derp_munch
 PRODUCT_DEVICE := munch
@@ -21,6 +24,9 @@ PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := 22021211RC
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+TARGET_GAPPS_ARCH := arm64
+
+TARGET_USES_MINI_GAPPS := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="munch-user 13 RKQ1.211001.001 V816.0.9.0.ULMMIXM release-keys" \
